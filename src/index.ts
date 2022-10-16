@@ -17,8 +17,7 @@ const DocsSearch = (_options?: UserOptions): PluginOption => {
       if (id.endsWith('.md')) {
         const env = {}
         const html = renderer.render(code, env)
-        const md = await mdParser(html)
-        console.log(env)
+        const md = await mdParser(html, env)
       }
     },
   }
